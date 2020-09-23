@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+ <meta charset="utf-8">
+ <meta name="generator" content="AlterVista - Editor HTML"/>
+ <title>
+
+1900
+
+ 20200923
+ ANALISI euvmigv0
+
+ versione personalizzata di
+ eudinamicv4
+
+
+ </title>
+ 
+ 
+<!-- BOOTSTRAP 5 --> 
+<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+<!-- JavaScript and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+ <!-- Production version -->
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+ 
+ 
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+ 
+<script src="https://use.fontawesome.com/2d0876dd08.js"></script>
+
+
+
+<script src="base_dati.js"></script>
+
+
+
+<style>
+/* bootstrap5 */
+:root {
+ --bs-blue: #0d6efd;
+ --bs-indigo: #6610f2;
+ --bs-purple: #6f42c1;
+ --bs-pink: #d63384;
+ --bs-red: #dc3545;
+ --bs-orange: #fd7e14;
+ --bs-yellow: #ffc107;
+ --bs-green: #28a745;
+ --bs-teal: #20c997;
+ --bs-cyan: #17a2b8;
+ --bs-white: #fff;
+ --bs-gray: #6c757d;
+ --bs-gray-dark: #343a40;
+ --bs-primary: #0d6efd;
+ --bs-secondary: #6c757d;
+ --bs-success: #28a745;
+ --bs-info: #17a2b8;
+ --bs-warning: #ffc107;
+ --bs-danger: #dc3545;
+ --bs-light: #f8f9fa;
+ --bs-dark: #343a40;
+ --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+ --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+ --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+
+</style>
+
+
+
+
+<style>html *{ font-size:1.5rem; font-family:monospace; 
+z-index: 0;}</style>
+
+
+
+<style>
+/*
+ Fin qui la viewport non ha scrollbar xy 
+ che in android sono poco intrusivi ma
+ segnalano in modo inaccurato la presenza
+ di overflow.In windows al contrario essi
+ sono molto intrusivi e danno chiaramente
+ lo stato ma esteticamente poco belli
+ soprattutto se scrollbarxy appare in
+ browser e in elementi es.main.
+ 
+ La barra apiedipagina ( footer ) risulta
+ ben posizionata e poco intrusiva in quanto
+ risulta possibile disattivarla con toggle
+ collapse expand icona. Tra i gadget in
+ footer a sinistra un form nel quale sono
+ visualizzate le dimensioni della finestra
+ corrente in modo dinamico. Da qui risulta
+ un problema di flickering in taluni
+ breakpoint ( precisamente nel momento
+ nel quale con resize window appaiono 
+ scrollbarxy). Se il flickering footer 
+ avviene in desktop si risolve in modo
+ semplice riadattando le dimensioni viewport.
+ Al contrario con dispositivi mobile 
+ non essendo possibile la piena
+ caratteristica del resize es.diminuzione
+ width height window ci si troverebbe in
+ un situazione di stallo fastidiosa. Per
+ ovviare all'inconveniente esiste il toggle
+ per disattivare la applicazione di
+ setinterval al div id ( icona svg bootsrap).
+ Nel modo user con una apposita classe si
+ possono disattivare visibility hidden
+ le componenti admin. Questo lascia in
+ funzione set interval per cui il flickering
+ point si riproduce in modo nascosto. 
+ Il comando display none aiuta a risolvere
+ ma richiede un hacking.
+ 
+ Il footer contiene form input per valori
+ top left width height font-size i quali
+ sono poi passati con il bottone input
+ alla app javascript che compone la
+ visualizzazione del riquadro viewport, in
+ modo admin.
+ 
+ A destra i due pulsanti vaitop vaibottom
+ regolano la posizione di parti invisibili
+ nel riquadro dovute a overflow.
+ 
+ Il passaggio da admin a user avviene con il
+ bottone a sinistra nel footer, utilizzandolo
+ si nascondono i due toggle acapopagina( header)
+ al fine di evitare la intrusioni delle icone
+ quando la viewport risulta ridotta come in
+ tablet e smartphone.
+ 
+ 
+
+*/
+
+
+/* DEFINIZIONE BORDI */
+
+/**************************
+ articolo0 serve da provino
+***************************/
+ .bottone_remove{ border:solid 0rem fuchsia; }
+
+ .pos_settaggi_articolo0{ border:dashed .05rem red; }
+
+ .pos_settaggi_articolo0>span{ border:solid .05rem rgba(0,0,0,0.75); }
+
+ .pos_settaggi_articolo0>span>span{ border:solid 0rem lime; }
+ 
+ 
+</style>
+
+
+
+
+
+<style>
+
+html, body, main {
+ margin:0 auto; 
+}
+
+body, main{
+ position: absolute; padding: 0px;
+ text-align:justify; overflow: auto;
+}
+
+ html{position:relative; 
+ width:800px; height:90%;
+ height:100%; /* debugging */
+ width:850px; /* debugging */
+
+ text-align:center; 
+ 
+ }
+
+ body{
+ top:0px; left:0%; 
+ width: 100%; height: 99%; 
+ height: 100%; 
+ }
+
+ main{
+ top:2px; left:0%;
+ width:99%; height:100%;
+ }
+ 
+ </style>
+ 
+ 
+ <style>
+ html{ 
+ border:solid .205rem rgb(148, 102, 102);
+
+ border:solid .205rem lime;
+ background-color:rgb(211, 206, 182);} 
+ 
+ body{ 
+ background-color:oldlace;
+ border:solid .1rem rgb(100, 160, 160); 
+ border:solid .1rem fuchsia; 
+ }
+ 
+ main{ border:dashed .05rem blue;}
+ p{border:solid .1rem burlywood; }
+
+ </style>
+ 
+ 
+ 
+ <style>
+ /* RIMUOVE GRUPPO SETTAGGI
+ APIEDIPAGINA toggleicona */
+ 
+ .bottone_remove, 
+.bottone_remove_toggle_completo_jQuery
+{
+position:fixed; top:0; right:0; 
+margin:0; padding:0;
+width:auto; height:0px;
+cursor:pointer;
+background-color: coral;
+}
+
+.bottone_remove>span{
+ margin:0 !important; 
+ padding:0 !important;
+background-color:green; 
+color:white; 
+border:none; border-radius:0.2rem;
+font-size:42px;
+z-index:2100;
+} 
+
+ /* SETTAGGI APIEDIPAGINA */
+ aside.pos_settaggi_articolo0{
+ position:fixed;
+ bottom:0; left:0; 
+ width:100%;
+ }
+
+ .pos_settaggi_articolo0{
+ margin:0 auto; padding:0;
+ text-align:center;
+ background-color:oldlace;
+ overflow: auto;
+ }
+ 
+ .pos_settaggi_articolo0>span{
+ border-radius:0.2rem; 
+ }
+
+ .pos_settaggi_articolo0>span>span{
+ font-size:16px;
+ }
+ 
+ aside>span>input {
+ width:80px; height:22px; 
+ font-size:20px; 
+ padding:0rem;
+ text-align:center; } 
+
+ aside>span>span{color:black; }
+ 
+ .altern_tipo_uno, .altern_tipo_due{
+ margin-left: 0.1rem; margin-right: 0.1rem;
+ padding-left: 0.2rem; padding-bottom: 0.1rem;
+ }
+.altern_tipo_uno{
+ background-color:burlywood; }
+.altern_tipo_due{
+ background-color:var(--bs-cyan);}
+ 
+aside>button{
+ width:25px; font-size:16px; 
+ margin:0; padding:0;
+ background-color:oldlace; color:black;
+ border:none;
+ font: size 16px; }
+
+ .bottone_input, .bottone_input_invia_blocco_dati
+ {
+ cursor:pointer; 
+ margin-right: 0.4rem;
+ background-color:transparent; color:black; 
+ vertical-align:top; 
+ border-radius:0.2rem; }
+ 
+.bottone_input>span{
+ background-color:orange; 
+ font-size:34px; vertical-align:middle; border-radius:0.2rem; }
+
+aside>a.material-icons{
+ vertical-align:top; 
+ background-color:green; color:white; 
+ font-size:34px; 
+ border-radius:0.2rem; } 
+
+
+.posizione_spinner{
+ position:fixed; top:0; left:0; border:none; }
+ 
+.NASCONDI_EUVX, .nascondiuser{ display:none; } 
+
+html * { border-color:transparent !important; }
+
+html{ border-color:transparent !important; }
+
+ </style>
+ 
+
+</head>
+
+<body onload="attesa()">
+<main>
+<span id="main_start" 
+style="position:absolute; top:0; left:0;"></span>
+
+
+
+ <div id="articolo0">
+ <!--
+ <span class="h4" style="font-variant: small-caps; ">inserisci i dati e click
+ <span class="material-icons" style="font-variant: normal;">input</span> 
+ </span>
+ -->
+ </div>
+
+
+
+
+ <div>
+ <h1>BeatSuperNova</h1>
+
+ </div>
+ 
+
+
+
+
+
+ <span id="main_end" 
+ style="position:relative; bottom:0; left:0;"></span>
+</main>
+
+<!-- RIMUOVI APIEDIPAGINA -->
+<a id="rimuovi_apiedipagina" class="bottone_remove NASCONDI_EUVX">
+<span class="material-icons">expand_less</span>
+</a>
+
+
+<script>
+$('.bottone_remove').on('click',function(){
+ // if ($(this).find('span').text() == 'add'){
+
+if ($(this).find('span').text() == 'expand_more'){
+ $(this).find('span').text('expand_less');
+ } else {
+ // $(this).find('span').text('add');
+ 
+ $(this).find('span').text('expand_more');
+ }
+jQuery("#pos_settaggi_articolo0").toggle(); 
+ 
+});
+
+</script>
+
+ <aside id="pos_settaggi_articolo0" 
+ class="pos_settaggi_articolo0 NASCONDI_EUVX" >
+
+ <button id="no_ico_acapopagina" 
+ type="button" 
+ class="btn btn-secondary btn-sm">
+</button>
+
+<script>
+ // gestisce il semaforo afinepagina 
+ // toggle icone acapopagina
+
+ jQuery("#no_ico_acapopagina").on('click', function()
+ {
+ jQuery("#rimuovi_apiedipagina").toggle(); 
+ jQuery("#rimuovi_WH_apiedipagina").toggle();
+ }
+ )
+</script>
+
+ <span id="dim_win"></span>
+
+ <span class="altern_tipo_uno">
+ <input type="number" id="articolo0_TOP" 
+ value="16" ><span>T</span>
+ </span> 
+
+ <span class="altern_tipo_due">
+ <input type="number" id="articolo0_LEFT" 
+ value="16" ><span>H</span>
+ </span> 
+ 
+ <span class="altern_tipo_uno">
+ <input type="number" id="articolo0_WIDTH" 
+ value="256" ><span>W</span>
+ </span> 
+
+ <span class="altern_tipo_due">
+ <input type="number" id="articolo0_HEIGHT" 
+ value="256" ><span>H</span>
+ </span> 
+
+ <span class="altern_tipo_uno">
+ <input type="number" id="articolo0_FONT_SIZE" 
+ value="16" ><span>F</span>
+ </span>
+ 
+ <button onclick="TLWH()" class="bottone_input" 
+ style="display:inline-block;">
+ <span class="material-icons">
+ input </span>
+ </button>
+
+ <a href="#main_start" class="material-icons">arrow_circle_up</a>
+ <a href="#main_end" class="material-icons">arrow_circle_down</a>
+
+<script>
+
+function TLWH(){
+articolo0_TOP=document.getElementById("articolo0_TOP").value;
+articolo0_LEFT=document.getElementById("articolo0_LEFT").value;
+articolo0_WIDTH=document.getElementById("articolo0_WIDTH").value;
+articolo0_HEIGHT=document.getElementById("articolo0_HEIGHT").value;
+articolo0_FONT_SIZE=document.getElementById("articolo0_FONT_SIZE").value;
+
+document.getElementById("articolo0").innerHTML=
+' <style>'+
+' .articolo0{'+
+// ' position:relative;'+
+
+' position:absolute;'+ // debugging
+
+' top:'+articolo0_TOP+'px; '+
+' left:'+articolo0_LEFT+'px; '+
+' width:'+articolo0_WIDTH+'px; '+
+' height:'+articolo0_HEIGHT+'px; '+
+' font-size:'+articolo0_FONT_SIZE+'px; '+
+// 
+' background-color:rgba(128,128,128,0.5); '+
+' overflow:auto; '+
+' '+
+' border:solid .2rem orange;'+
+' '+
+' }'+
+' </style>'+
+' <div class="articolo0">'+
+// ' testo: '+lorem_ipsum[0]+lorem_ipsum[1]+
+// ' immagine: '+
+// 
+// ' <img src="'+lorem_ipsum_immagine[0]+'" />'+
+' '+
+' '+
+' '+
+' </div>'+
+'';
+}
+
+</script>
+
+</aside>
+
+
+
+</body>
+<span id="rimuovi_WH_apiedipagina" class="wiwihe_remove_svg NASCONDI_EUVX" 
+data-toggle="tooltip" title="Visualizza Dim Window Nasconde Cassella Immagine" 
+style="position:fixed; top:0; left:0; border:solid 0rem red; z-index:2100; " >
+<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-window" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+ <path fill-rule="evenodd" d="M14 2H2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1zM2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z"/>
+ <path fill-rule="evenodd" d="M15 6H1V5h14v1z"/>
+ <path d="M3 3.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm1.5 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm1.5 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+</svg>
+</span>
+<script>
+ $(document).ready(function(){
+ $('[data-toggle="tooltip"]').tooltip(); 
+ });
+ </script>
+ 
+<script>
+jQuery('.wiwihe_remove_svg').on('click',function(){
+
+jQuery("#dim_win").toggle(); 
+
+jQuery("#articolo0").toggle(); 
+
+});
+</script>
+
+
+<script>
+setInterval(
+function dimensione_finestra(){
+
+xwin=window.innerWidth; ywin=window.innerHeight;
+document.getElementById("dim_win").innerHTML=
+' '+
+' '+xwin+
+' '+
+' '+ywin+
+' '+
+' '+
+'';
+
+}
+
+)
+
+</script>
+
+<span id="attivadmin" class="badge bg-secondary" 
+style="position:fixed; cursor:pointer; 
+bottom:0; left:0; font-size:0.5rem;">
+&nbsp;
+</span>
+
+<script>
+ jQuery("#attivadmin").on('click', function()
+ {
+ jQuery("#dim_win").toggle();
+jQuery("#rimuovi_apiedipagina").toggle();
+jQuery("#rimuovi_WH_apiedipagina").toggle();
+// jQuery("#articolo0").toggle();
+// 
+jQuery("#pos_settaggi_articolo0").toggle(); 
+ }
+ )
+</script>
+
+<spinner id="spinner" 
+class="posizione_spinner fa fa-spinner fa-pulse">
+</spinner>
+
+<script>
+ function attesa(){
+ if (document.all){}
+ else if (document.getElementById){
+ document.getElementById("spinner").style.visibility="hidden";
+ }
+ 
+ }
+ </script>
+
+</html>
