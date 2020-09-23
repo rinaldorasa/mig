@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+ <meta charset="utf-8">
+ <meta name="generator" content="AlterVista - Editor HTML"/>
+ <title>
+
+0009
+
+ 20200922
+ ANALISI euvmigv0
+
+ versione personalizzata di
+ eudinamicv4
+
+
+ </title>
+ 
+ 
+<!-- BOOTSTRAP 5 --> 
+<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+<!-- JavaScript and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+ <!-- Production version -->
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+ 
+ 
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+ 
+<script src="https://use.fontawesome.com/2d0876dd08.js"></script>
+
+
+
+<script src="base_dati.js"></script>
+
+
+
+<style>
+/* bootstrap5 */
+:root {
+ --bs-blue: #0d6efd;
+ --bs-indigo: #6610f2;
+ --bs-purple: #6f42c1;
+ --bs-pink: #d63384;
+ --bs-red: #dc3545;
+ --bs-orange: #fd7e14;
+ --bs-yellow: #ffc107;
+ --bs-green: #28a745;
+ --bs-teal: #20c997;
+ --bs-cyan: #17a2b8;
+ --bs-white: #fff;
+ --bs-gray: #6c757d;
+ --bs-gray-dark: #343a40;
+ --bs-primary: #0d6efd;
+ --bs-secondary: #6c757d;
+ --bs-success: #28a745;
+ --bs-info: #17a2b8;
+ --bs-warning: #ffc107;
+ --bs-danger: #dc3545;
+ --bs-light: #f8f9fa;
+ --bs-dark: #343a40;
+ --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+ --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+ --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+
+</style>
+
+
+
+
+<style>html *{ font-size:1.5rem; font-family:monospace; 
+z-index: 0;}</style>
+
+
+
+<style>
+
+
+/**************************
+ articolo0 serve da provino
+***************************/
+ .bottone_remove{ border:solid 0rem fuchsia; }
+
+ .pos_settaggi_articolo0{ border:dashed .05rem red; }
+
+ .pos_settaggi_articolo0>span{ border:solid .05rem rgba(0,0,0,0.75); }
+
+ .pos_settaggi_articolo0>span>span{ border:solid 0rem lime; }
+ 
+ 
+</style>
+
+
+
+
+
+<style>
+
+html, body, main {
+ margin:0 auto; 
+}
+
+body, main{
+ position: absolute; padding: 0px;
+ text-align:justify; overflow: auto;
+}
+
+ html{position:relative; 
+ width:800px; height:90%;
+ height:100%; /* debugging */
+ width:850px; /* debugging */
+
+ text-align:center; 
+ 
+ }
+
+ body{
+ top:0px; left:0%; 
+ width: 100%; height: 99%; 
+ height: 100%;  
+ }
+
+ main{
+ top:2px; left:0%;
+ width:99%; height:100%;
+ }
+ 
+ </style>
+ <style>
+ html{ 
+   border:solid .205rem rgb(148, 102, 102);
+
+   border:solid .205rem lime;
+ background-color:rgb(211, 206, 182);} 
+ 
+ body{ 
+ background-color:oldlace;
+ border:solid .1rem rgb(100, 160, 160); 
+ border:solid .1rem fuchsia; 
+ }
+ 
+ main{ border:dashed .05rem blue;}
+ p{border:solid .1rem burlywood; }
+
+ </style>
+ 
+ 
+ 
+ <style>
+ 
+ .bottone_remove, 
+.bottone_remove_toggle_completo_jQuery
+{
+position:fixed; top:0; right:0; 
+margin:0; padding:0;
+width:auto; height:0px;
+cursor:pointer;
+background-color: coral;
+}
+
+.bottone_remove>span{
+ margin:0 !important; 
+ padding:0 !important;
+background-color:green; 
+color:white; 
+border:none; border-radius:0.2rem;
+font-size:42px;
+z-index:2100;
+} 
+
+ /*  SETTAGGI APIEDIPAGINA */
+  aside.pos_settaggi_articolo0{
+ position:fixed;
+ bottom:0; left:0; 
+ width:100%;
+ }
+
+ .pos_settaggi_articolo0{
+ margin:0 auto; padding:0;
+ text-align:center;
+ background-color:oldlace;
+ overflow: auto;
+ }
+ 
+  .pos_settaggi_articolo0>span{
+ border-radius:0.2rem; 
+ }
+
+ .pos_settaggi_articolo0>span>span{
+ font-size:16px;
+ }
+ 
+ aside>span>input {
+ width:80px; height:22px; 
+ font-size:20px; 
+ padding:0rem;
+ text-align:center; } 
+
+ aside>span>span{color:black; }
+ 
+ .altern_tipo_uno, .altern_tipo_due{
+ margin-left: 0.1rem; margin-right: 0.1rem;
+ padding-left: 0.2rem; padding-bottom: 0.1rem;
+ }
+.altern_tipo_uno{
+ background-color:burlywood; }
+.altern_tipo_due{
+ background-color:var(--bs-cyan);}
+
+
+ </style>
+ 
+
+</head>
+<body>
+<main>
+
+
+  
+</main>
+
+<!-- RIMUOVI APIEDIPAGINA -->
+<a id="rimuovi_apiedipagina" class="bottone_remove NASCONDI_EUVX">
+<span class="material-icons">expand_less</span>
+</a>
+
+
+<script>
+$('.bottone_remove').on('click',function(){
+ // if ($(this).find('span').text() == 'add'){
+
+if ($(this).find('span').text() == 'expand_more'){
+ $(this).find('span').text('expand_less');
+ } else {
+ // $(this).find('span').text('add');
+ 
+ $(this).find('span').text('expand_more');
+ }
+jQuery("#pos_settaggi_articolo0").toggle(); 
+ 
+});
+
+</script>
+
+ <aside id="pos_settaggi_articolo0" 
+ class="pos_settaggi_articolo0 NASCONDI_EUVX" >
+
+ <button id="no_ico_acapopagina" 
+ type="button" 
+ class="btn btn-secondary btn-sm">
+</button>
+
+<script>
+ // gestisce il semaforo afinepagina 
+ // toggle icone acapopagina
+
+ jQuery("#no_ico_acapopagina").on('click', function()
+ {
+ jQuery("#rimuovi_apiedipagina").toggle(); 
+ jQuery("#rimuovi_WH_apiedipagina").toggle();
+ }
+ )
+</script>
+
+ <span id="dim_win"></span>
+
+ <span class="altern_tipo_uno">
+ <input type="number" id="articolo0_TOP" 
+ value="16" ><span>T</span>
+ </span> 
+
+ <span class="altern_tipo_due">
+ <input type="number" id="articolo0_LEFT" 
+ value="16" ><span>H</span>
+ </span> 
+ 
+ <span class="altern_tipo_uno">
+ <input type="number" id="articolo0_WIDTH" 
+ value="256" ><span>W</span>
+ </span> 
+
+ <span class="altern_tipo_due">
+ <input type="number" id="articolo0_HEIGHT" 
+ value="256" ><span>H</span>
+ </span> 
+
+ <span class="altern_tipo_uno">
+ <input type="number" id="articolo0_FONT_SIZE" 
+ value="16" ><span>F</span>
+ </span>
+ 
+  <button onclick="TLWH()" class="bottone_input" 
+ style="display:inline-block;">
+ <span class="material-icons">
+ input </span>
+ </button>
+
+ <a href="#main_start" class="material-icons">arrow_circle_up</a>
+ <a href="#main_end" class="material-icons">arrow_circle_down</a>
+
+<script>
+
+function TLWH(){
+articolo0_TOP=document.getElementById("articolo0_TOP").value;
+articolo0_LEFT=document.getElementById("articolo0_LEFT").value;
+articolo0_WIDTH=document.getElementById("articolo0_WIDTH").value;
+articolo0_HEIGHT=document.getElementById("articolo0_HEIGHT").value;
+articolo0_FONT_SIZE=document.getElementById("articolo0_FONT_SIZE").value;
+
+document.getElementById("articolo0").innerHTML=
+' <style>'+
+' .articolo0{'+
+// ' position:relative;'+
+
+' position:absolute;'+ // debugging
+
+' top:'+articolo0_TOP+'px; '+
+' left:'+articolo0_LEFT+'px; '+
+' width:'+articolo0_WIDTH+'px; '+
+' height:'+articolo0_HEIGHT+'px; '+
+' font-size:'+articolo0_FONT_SIZE+'px; '+
+' overflow:auto; '+
+' '+
+' border:solid .2rem orange;'+
+' '+
+' }'+
+' </style>'+
+' <div class="articolo0">'+
+// 
+' testo: '+lorem_ipsum[0]+lorem_ipsum[1]+
+// 
+' immagine: '+
+// 
+// 
+' <img src="'+lorem_ipsum_immagine[0]+'" />'+
+' '+
+' '+
+' '+
+' </div>'+
+'';
+}
+
+</script>
+
+</aside>
+
+
+
+</body>
+</html>
